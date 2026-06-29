@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Unos vijesti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Administracija - Unos vijesti</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="kategorija.php?id=sport">Sport</a></li>
+                <li><a href="kategorija.php?id=politique">Politique</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="row">
+            <form action="skripta.php" method="POST" enctype="multipart/form-data">
+                <div>
+                    <label for="naslov">Naslov vijesti</label><br>
+                    <input type="text" name="title" required>
+                </div>
+                
+                <div>
+                    <label for="sazetak">Kratki sažetak</label><br>
+                    <textarea name="about" cols="30" rows="5" required></textarea>
+                </div>
+                
+                <div>
+                    <label for="tekst">Sadržaj vijesti</label><br>
+                    <textarea name="content" cols="30" rows="10" required></textarea>
+                </div>
+                
+                <div>
+                    <label for="slika">Slika</label><br>
+                    <input type="file" name="photo" accept="image/*" required>
+                </div>
+                
+                <div>
+                    <label for="kategorija">Kategorija</label><br>
+                    <select name="category">
+                        <option value="sport">Sport</option>
+                        <option value="politique">Politique</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label>
+                        <input type="checkbox" name="archive"> Arhiviraj vijest
+                    </label>
+                </div>
+                
+                <button type="submit">Pošalji</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>SUIVEZ LE MONDE</p>
+    </footer>
+</body>
+</html>
