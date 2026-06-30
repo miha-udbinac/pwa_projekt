@@ -53,7 +53,7 @@ $row = mysqli_fetch_array($result);
     </main>
 
     <footer>
-        <p>SUIVEZ LE MONDE</p>
+        <p>Mihael Uđbinac, 2026.</p>
     </footer>
 </body>
 </html>
