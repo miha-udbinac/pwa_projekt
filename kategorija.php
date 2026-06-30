@@ -2,7 +2,6 @@
 include 'connect.php';
 define('UPLPATH', 'uploads/');
 
-// Dohvaćanje kategorije iz URL-a (npr. kategorija.php?id=sport)
 $kategorija = $_GET['id'];
 ?>
 
@@ -51,7 +50,7 @@ $kategorija = $_GET['id'];
     </main>
 
     <footer>
-        <p>SUIVEZ LE MONDE</p>
+        <p>Mihael Uđbinac, 2026.</p>
     </footer>
 </body>
 </html>
