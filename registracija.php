@@ -41,13 +41,11 @@ session_start();
                 if (mysqli_stmt_num_rows($stmt) > 0) {
                     echo "<p>Korisničko ime već postoji!</p>";
                 } else {
-                    // Unos u bazu
                     $sql = "INSERT INTO korisnik (korisnicko_ime, lozinka, razina) VALUES (?, ?, ?)";
                     $stmt = mysqli_stmt_init($dbc);
                     if (mysqli_stmt_prepare($stmt, $sql)) {
                         mysqli_stmt_bind_param($stmt, 'ssi', $username, $hashed_password, $razina);
                         mysqli_stmt_execute($stmt);
-                        echo "<p>Registracija uspješna!</p>";
                         echo "<p>Registracija uspješna!</p>";
                         echo '<a href="index.php">Povratak na početnu stranicu</a>';
                     }
