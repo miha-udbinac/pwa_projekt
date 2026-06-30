@@ -35,6 +35,7 @@ $result = mysqli_query($dbc, $query);
     if (isset($_SESSION['username'])) {
     echo '<p>Dobrodošli, <strong>' . $_SESSION['username'] . '</strong>! | <a href="logout.php">Odjavi se</a></p>';
     }
+    echo '<a href="index.php">Povratak na početnu stranicu</a>';
     ?><h1>Administracija vijesti</h1></header>
     <main>
         <div><a href="unos.html">Unos nove vijesti</a></div>
